@@ -1,5 +1,5 @@
 import React from 'react';
-import useSearch from '../components/state/useSearch';
+import useSearch from '../state/useSearch';
 
 const Search = () => {
   const { inputValue, handleInputChange, handleSubmit } = useSearch();
