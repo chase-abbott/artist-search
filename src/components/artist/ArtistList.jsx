@@ -6,6 +6,7 @@ const ArtistList = ({ results }) => {
     return (
       <li key={artist.id}>
         <h1> {artist.name}</h1>
+        {artist.disambiguation ? <h4>{artist.disambiguation}</h4> : null} 
       </li>
     );
   });
