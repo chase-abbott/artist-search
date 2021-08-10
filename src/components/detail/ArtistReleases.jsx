@@ -5,12 +5,11 @@
 // render list of releases with name header
 import React from 'react';
 import useArtist from '../state/useArtist';
+import ReleaseList from './ReleaseList';
 
 const ArtistReleases = () => {
   const { releases } = useArtist();
-  return (
-    <h1>Hi all you cool cats and kittens</h1>
-  );
+  return <ReleaseList releases={releases} />;
 };
 
 export default ArtistReleases;
