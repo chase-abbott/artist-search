@@ -1,8 +1,8 @@
 import React from 'react';
 import useSearch from '../state/useSearch';
 
-const Search = () => {
-  const { inputValue, handleInputChange, handleSubmit } = useSearch();
+const Search = ({ inputValue, handleInputChange, handleSubmit }) => {
+  
 
   return (
     <form onSubmit={handleSubmit}>
