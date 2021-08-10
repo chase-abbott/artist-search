@@ -5,12 +5,12 @@ import ArtistList from './ArtistList';
 import useSearch from '../state/useSearch';
 
 const Home = () => {
-  const { inputValue, handleInputChange, handleSubmit } = useSearch();
+  const { inputValue, handleInputChange, handleSubmit, results } = useSearch();
 
   return (
     <>
       <Search inputValue={inputValue} handleInputChange={handleInputChange} handleSubmit={handleSubmit}/>
-      {/* <ArtistList/> */}
+      <ArtistList results={results}/> 
     </>
   );
 

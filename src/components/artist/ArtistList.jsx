@@ -1,18 +1,16 @@
-import React, { useEffect } from 'react';
-import useSearch from '../state/useSearch';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 
-const ArtistList = () => {
-  const { state } = useLocation([]);
+const ArtistList = ({ results }) => {
 
-  const listItems = state.map(artist => {
-    <li key={artist.id}>
-      <h1> {artist.name}</h1>
-    </li>;
+  const listItems = results.map(artist => {
+    return (
+      <li key={artist.id}>
+        <h1> {artist.name}</h1>
+      </li>
+    );
   });
 
-
-  return <ul> {listItems}</ul>; 
+  return <ul>{listItems}</ul>; 
 };
 
 export default ArtistList;
