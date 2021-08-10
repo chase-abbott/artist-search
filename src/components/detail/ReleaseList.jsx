@@ -8,7 +8,7 @@ const ReleaseList = ({ releases }) => {
     return (<li key={release.id}>
       <Release coverArt={release['cover-art-archive'].front} id={release.id} title={release.title} />
     </li>);
-});
+  });
   return <ul>{releaseItem}</ul>;
 
 };
