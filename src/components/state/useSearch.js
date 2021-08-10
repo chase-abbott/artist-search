@@ -1,8 +1,11 @@
+/* eslint-disable max-len */
 import { useState } from 'react';
 
-const useSearch = () => {
 
+
+const useSearch = () => {
   const [inputValue, setInputValue] = useState('');
+  const [results, setResults] = useState([]);
 
   const handleInputChange = ({ target }) => {
     setInputValue(target.value);
@@ -10,11 +13,13 @@ const useSearch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    return fetch(`http://musicbrainz.org/ws/2/artist?query=${inputValue}&fmt=json`)
+      .then(res => res.json())
+      .then(res => setResults(res.artists));
   };
 
   return (
-    { inputValue, handleInputChange, handleSubmit }
+    { inputValue, results, handleInputChange, handleSubmit }
   );
 };
 
