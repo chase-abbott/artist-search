@@ -1,10 +1,9 @@
 /* eslint-disable max-len */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Release = ({ coverArt, id, title, artist }) => {
-
-
   const location = {
     pathname: `/recordings/${id}`,
     state: artist
@@ -25,3 +24,9 @@ const Release = ({ coverArt, id, title, artist }) => {
 
 export default Release;
 
+Release.propTypes = {
+  coverArt: PropTypes.boolean.isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  artist: PropTypes.object.isRequired
+};

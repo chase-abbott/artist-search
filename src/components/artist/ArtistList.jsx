@@ -1,5 +1,6 @@
 import React from 'react';
 import Artist from './Artist';
+import PropTypes from 'prop-types';
 
 const ArtistList = ({ results }) => {
 
@@ -15,3 +16,7 @@ const ArtistList = ({ results }) => {
 };
 
 export default ArtistList;
+
+ArtistList.propTypes = {
+  results: PropTypes.array.isRequired
+};

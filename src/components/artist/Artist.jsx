@@ -1,9 +1,8 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Artist = ({ artist }) => {
-  // createContext(artist.name);
   const location = {
     pathname: `/artist-details/${artist.id}`,
     state: {

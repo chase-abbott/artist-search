@@ -3,7 +3,7 @@
 // check if cover art exists
 // if exists, get from URL and display; else display placeholder img
 // render list of releases with name header
-import React, { useEffect } from 'react';
+import React from 'react';
 import useArtist from '../state/useArtist';
 import ReleaseList from './ReleaseList';
 import { useLocation } from 'react-router-dom';
