@@ -25,7 +25,7 @@ const Release = ({ coverArt, id, title, artist }) => {
 export default Release;
 
 Release.propTypes = {
-  coverArt: PropTypes.boolean.isRequired,
+  coverArt: PropTypes.bool.isRequired,
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   artist: PropTypes.object.isRequired
