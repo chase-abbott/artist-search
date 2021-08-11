@@ -7,7 +7,7 @@ describe('Release List', () => {
   it('renders a list of releases to the page', () => {
     const releases = [...Array(5)].map((_, i) => {
       return {
-        id: 12345 + i,
+        id: '12345' + i,
         'cover-art-archive': {
           front: true
         },

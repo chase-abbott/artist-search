@@ -8,7 +8,7 @@ describe('Recordings List', () => {
   it('renders a list of recordings to the page', () => {
     const recordings = [...Array(5)].map((_, i) => {
       return {
-        id: 12345 + i,
+        id: '12345' + i,
         title: 'The Smiths'
       };
     });
