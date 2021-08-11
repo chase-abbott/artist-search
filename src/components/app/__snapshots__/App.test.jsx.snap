@@ -15,7 +15,9 @@ exports[`App component renders App 1`] = `
     <input
       value=""
     />
-    <button>
+    <button
+      data-testid="search"
+    >
       search
     </button>
   </form>

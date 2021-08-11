@@ -16,13 +16,6 @@ const useSearch = (page) => {
     }
   }, [page]);
 
-  // const handleClick = () => {
-  //   return fetch(`https://musicbrainz.org/ws/2/artist?query=${inputValue}&fmt=json&limit=10&offset=${page * 10}`)
-  //     .then(res => res.json())
-  //     .then(res => setResults(res.artists))
-  //     .then(() => booger.current = true);
-  // };
-
   const handleInputChange = ({ target }) => {
     setInputValue(target.value);
   };
