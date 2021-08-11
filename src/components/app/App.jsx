@@ -10,6 +10,7 @@ export default function App() {
       <Route exact path="/" component={Home}/>
       <Route exact path="/artist-details/:id" component={ArtistReleases}/>
       <Route exact path="/recordings/:id" component={RecordingsPage} />
+      <Route exact path="/lyrics/:artist/:title"/>
     </Switch>
   );
 }
