@@ -23,13 +23,17 @@ const useSearch = (page) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
+    searchFetch();
+    
+  };
+
+ 
+  const searchFetch = (inputValue = 'smiths') => {
     return fetch(`https://musicbrainz.org/ws/2/artist?query=${inputValue}&fmt=json&limit=10`)
       .then(res => res.json())
       .then(res => setResults(res.artists))
       .then(() => booger.current = true);
   };
-
-  // .slice((page - 1) * 10, page * 10)
 
   return (
     { inputValue, results, handleInputChange, handleSubmit }
