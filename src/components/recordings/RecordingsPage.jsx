@@ -4,7 +4,7 @@ import useRecording from '../state/useRecording';
 
 const RecordingsPage = () => {
   const { recordings } = useRecording();
-  return <RecordingsList recordings={recordings} />
+  return <RecordingsList recordings={recordings} />;
 
 };
 

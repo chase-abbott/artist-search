@@ -5,6 +5,7 @@ import { useState } from 'react';
 const useSearch = () => {
   const [inputValue, setInputValue] = useState('');
   const [results, setResults] = useState([]);
+  // const [page, setPage] = useState(1);
 
   const handleInputChange = ({ target }) => {
     setInputValue(target.value);
