@@ -7,9 +7,12 @@ const useArtist = (page) => {
   const { id } = useParams();
 
   useEffect(() => {
-    return fetch(`https://musicbrainz.org/ws/2/release?artist=${id}&fmt=json`)
+    console.log(id);
+    return fetch(`https://musicbrainz.org/ws/2/release?artist=${id}&fmt=json&limit=10&offset=${(page - 1) * 10}`)
       .then(res => res.json())
-      .then(res => setReleases(res.slice((page - 1) * 10, page * 10)));
+      .then(res => {
+        console.log(res);
+        setReleases(res.releases);});
 
   }, [page]);
   return { releases }; 
