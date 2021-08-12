@@ -3,16 +3,28 @@
 // check if cover art exists
 // if exists, get from URL and display; else display placeholder img
 // render list of releases with name header
-import React from 'react';
+import React, { useState } from 'react';
 import useArtist from '../state/useArtist';
 import ReleaseList from './ReleaseList';
 import { useLocation } from 'react-router-dom';
 
 const ArtistReleases = () => {
-  const { releases } = useArtist();
+  const [pages, setPages] = useState(1);
+  const { releases } = useArtist(pages);
   const { state } = useLocation();
  
-  return <ReleaseList releases={releases} artist={state}/>;
+  return (
+    <>
+      <button 
+        disabled={pages <= 1}
+        onClick={() => setPages((prevPage) => prevPage - 1)}>&lt;</button>
+      {pages}
+      <button
+        onClick={() => setPages((prevPage) => prevPage + 1)}>&gt;</button>
+      
+      <ReleaseList releases={releases} artist={state}/>
+    </>
+  );
 };
 
 export default ArtistReleases;
